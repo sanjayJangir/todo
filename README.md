@@ -40,6 +40,7 @@ A modern, secure, and feature-rich **To-Do List application** built with the **M
 - **React Router DOM** - Client-side routing
 - **Axios** - HTTP client for API communication
 - **CSS3** - Styling with modern CSS features
+- **Tailwind CSS** - Rapid UI development and utility-first styling
 
 ### Backend
 
@@ -389,3 +390,63 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ---
 
 ⭐ **Star this repository if you found it helpful!**
+
+### Tailwind CSS Integration
+
+The frontend uses [Tailwind CSS](https://tailwindcss.com/) for rapid UI development and utility-first styling.
+
+#### Tailwind Setup
+
+- Tailwind is already installed and configured in the `client/` directory.
+- Main config files:
+  - `client/tailwind.config.js`
+  - `client/postcss.config.js`
+- Tailwind's directives are imported in `client/src/index.css`.
+- You can use Tailwind utility classes in all React components.
+
+#### Add or Update Tailwind
+
+To update Tailwind or add plugins, run:
+
+```bash
+cd client
+npm install -D tailwindcss postcss autoprefixer
+```
+
+For more, see the [Tailwind docs](https://tailwindcss.com/docs/installation).
+
+### Directory Structure for Tailwind
+
+```
+client/
+  tailwind.config.js      # Tailwind config
+  postcss.config.js       # PostCSS config
+  src/
+    index.css            # Tailwind imports
+    ...                  # React components
+```
+
+---
+
+### Database Migration (Backend)
+
+If you need to run database migrations (e.g., for schema changes or seeding data), follow these steps:
+
+1. **Manual Migration** (Mongoose):
+
+   - Update your Mongoose models in `server/models/`.
+   - Use a script in `server/` (e.g., `migrate.js`) to perform migration logic.
+   - Run the script:
+     ```bash
+     cd server
+     node migrate.js
+     ```
+
+2. **Seeding Example**:
+   - Create a `seed.js` file in `server/` to insert initial data.
+   - Run:
+     ```bash
+     node seed.js
+     ```
+
+> **Note:** This project does not use a dedicated migration tool by default. For advanced migrations, consider using [migrate-mongo](https://www.npmjs.com/package/migrate-mongo) or a similar package.
