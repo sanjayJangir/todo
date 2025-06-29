@@ -41,6 +41,7 @@ A modern, secure, and feature-rich **To-Do List application** built with the **M
 - **Axios** - HTTP client for API communication
 - **CSS3** - Styling with modern CSS features
 - **Tailwind CSS** - Rapid UI development and utility-first styling
+- **TypeScript** - Type-safe JavaScript with TSX support
 
 ### Backend
 
@@ -173,13 +174,13 @@ Open a new terminal and navigate to the client directory:
 
 ```bash
 cd client
-npm install
+yarn install
 ```
 
 #### Start the React Development Server
 
 ```bash
-npm start
+yarn start
 ```
 
 The React application will open automatically at `http://localhost:3000`
